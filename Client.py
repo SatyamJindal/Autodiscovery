@@ -37,7 +37,7 @@ for i in range(1024):
 
 
 
-UID_BUFFER_SIZE = 39
+'''UID_BUFFER_SIZE = 39
 PROPERTY_BUFFER_SIZE = 256 
 ERROR_MORE_DATA = 234
 ERROR_INVALID_PARAMETER = 87
@@ -159,7 +159,7 @@ def get_installed_products_uids():
         products.append(uid_buffer.value)
     return products
 
-apps = get_installed_products()
+apps = get_installed_products()'''
 
 
 def client_program():
