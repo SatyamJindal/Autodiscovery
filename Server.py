@@ -1,6 +1,18 @@
+import MySQLdb
+import sys
 import socket
 
+
+try:
+   db = MySQLdb.connect('localhost','root','','kc')
+except Exception as e:
+   print('Cant get into the database')
+
+cursor = db.cursor()
+mine=''
+
 def server_program():
+   global mine, cursor
    # get the hostname
    host = socket.gethostname()
    port = 5000  # initiate port no above 1024
@@ -23,7 +35,10 @@ def server_program():
    #if not data:
       # if data is not received break
    #break
+      #value='1'
       print("from connected user: \n" + str(data))
+      #cursor.execute('INSERT INTO sjin(From, System, Name, Release  VALUES(1,value,value,value,value,value,value,value,value,value)')
+      mine+=str(data)
    #s=input('Do you want more requests?')
    #conn, address = server_socket.accept()
    #data = input(' -> ')
