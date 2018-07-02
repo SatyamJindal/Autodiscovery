@@ -168,7 +168,7 @@ def client_program():
     #print(host)
     client_socket = socket.socket()  # instantiate
     client_socket.connect((host, port))  # connect to the server
-    mac_add = str(':'.join(re.findall('..','%012x'%uuid.getnode())))
+    mac_add = str(':'.join(re.findall('..','%012x'%uuid.getnode())))                                #Mac Address
     #message = input(" -> ")  # take input
     message = 'System: '+str(pt.system())+'\n'+'Name: '+str(pt.node())+'\n'
     message+='release: '+str(pt.release())+'\n'+'version: '+str(pt.version())+'\n'
