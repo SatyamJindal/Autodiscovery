@@ -9,7 +9,7 @@ from winreg import *
 
 
 aReg = ConnectRegistry(None,HKEY_LOCAL_MACHINE)
-aKey = OpenKey(aReg, r"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall")
+aKey = OpenKey(aReg, r"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall")                    # 32 Bit
 final_soft=[]
 for i in range(1024):
     try:
@@ -21,7 +21,7 @@ for i in range(1024):
         continue
 
 aReg = ConnectRegistry(None,HKEY_LOCAL_MACHINE)
-aKey = OpenKey(aReg, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall")
+aKey = OpenKey(aReg, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall")                                 # 64 Bit
 
 
 for i in range(1024):
