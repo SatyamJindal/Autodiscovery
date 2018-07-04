@@ -90,7 +90,7 @@ def server_program():
       getinds(mine,inds)   
       softs = mine[indi:]                                                                             # Contains the List of all softwares
       
-      cursor.execute('SELECT MAX(id) from text;')                                                     # Gets the precious maximum Id so a duplicate key is not created
+      cursor.execute('SELECT MAX(id) from text;')                                                     # Gets the previous maximum Id so a duplicate key is not created
                                                                                                       # Done to avoid the unique primary key law
       num = cursor.fetchall()                                                          
       num=str(num[0])
