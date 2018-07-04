@@ -1,18 +1,32 @@
+'''
+
+Made by:-
+-----------------
+SATYAM JINDAL
+04-07-2018
+-----------------
+
+
+'''
+
+# Code for Server Side
+
+
 import MySQLdb
-import sys
+import sys                                                                                            # Importing Libraries
 import socket
 
 
 try:
-   db = MySQLdb.connect('localhost','root','','python')
+   db = MySQLdb.connect('localhost','root','','python')                                               # Connecting to the database
 except Exception as e:
    print('Cant get into the database')
 
 cursor = db.cursor()
 mine=''
 
-def getinds(s,inds):
-   s1=''
+def getinds(s,inds):                                                                                                     
+   s1=''                                                                                                                
    indi=-1
    for i in range(len(s)-5):
       if(s[i]=='L' and s[i+1]=='I' and s[i+2]=='S' and s[i+3]=='T'):
@@ -22,9 +36,9 @@ def getinds(s,inds):
          s1+=s[i]
    system = s1.index('System')
    name = s1.index('Name')
-   release = s1.index('release')
-   version = s1.index('version')
-   machine = s1.index('machine')
+   release = s1.index('release')                                                                      # Function for String formatting and getting different aspects                                                                              
+   version = s1.index('version')                                                                      # of the system
+   machine = s1.index('machine')                                                                                     
    processor = s1.index('processor')
    mac = s1.index('Mac')
    inds.append(s1[8:name])
@@ -39,32 +53,31 @@ def getinds(s,inds):
 
 def server_program():
    global mine, cursor
-   # get the hostname
-   host = socket.gethostname()
-   port = 5000  # initiate port no above 1024
+   host = socket.gethostname()                                                                        # Gets Hostname of the current(Server) system
+   port = 5000  
 
-   server_socket = socket.socket()  # get instance
-   # look closely. The bind() function takes tuple as argument
-   server_socket.bind((host, port))  # bind host address and port together
+   server_socket = socket.socket()                                                                    # Get instance
+   
+   server_socket.bind((host, port))                                                                   # Bind host address and port together in a tuple
 
-   # configure how many client the server can listen simultaneously
-   server_socket.listen(5)
-   s=input('Willing to accept more connections?')
-   curr=1
-   while(s!='no'):
+   
+   server_socket.listen(5)                                                                            # Configure how many client the server can listen simultaneously
+                                                                                                      # To be set as per the company's requirements
+
+   
+   #s=input('Willing to accept connections?')
+   #curr=1
+   while(1):                                                                                                            
       mine=''
-      conn, address = server_socket.accept()  # accept new connection
-      print("Connection from: " + str(address))
-   #s=input('Do you want more requests?')
-   #while(s!='No'):
-   #while True:
-   # receive data stream. it won't accept data packet greater than 1024 bytes
-      data = conn.recv(209800).decode()
-   #if not data:
-      # if data is not received break
-   #break
-      #value='1'
-      print("from connected user: \n" + str(data))
+      
+      conn, address = server_socket.accept()                                                          # accept new connection
+
+      
+      print("Connection from: " + str(address))                                                       # Connection from the respective IP 
+
+      data = conn.recv(209800).decode()                                                               # receive data stream. it won't accept data packet greater than 209800 bytes
+                                                                                                      # No. of bytes to be set as pe the company's requirements
+ 
       mine+=str(data)
       indi=-1
       inds=[]
@@ -74,20 +87,23 @@ def server_program():
          if(s[i]=='L' and s[i+1]=='I' and s[i+2]=='S' and s[i+3]=='T'):
             indi=i
             break
-      getinds(mine,inds)
-      #print(inds)
-      #print(indi)
-      #print(inds)
-      softs = mine[indi:]
-      #print(softs)
-      cursor.execute('INSERT INTO text VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(curr,str(address),inds[0],inds[1],inds[2],inds[3],inds[4],inds[5],inds[6],softs))
+      getinds(mine,inds)   
+      softs = mine[indi:]                                                                             # Contains the List of all softwares
+      
+      cursor.execute('SELECT MAX(id) from text;')                                                     # Gets the precious maximum Id so a duplicate key is not created
+                                                                                                      # Done to avoid the unique primary key law
+      num = cursor.fetchall()                                                          
+      num=str(num[0])
+      curr = num[1:num.index(',')]
+      if(curr[0]=='N'):
+         curr=1                                                                                       #Increments the current Maximum Id by one
+      else:
+         curr = int(curr)+1
+         
+      cursor.execute('INSERT INTO text VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(curr,str(address),inds[0],inds[1],inds[2],inds[3],inds[4],inds[5],inds[6],softs))     #Inserting into the database
       curr+=1
-   #s=input('Do you want more requests?')
-   #conn, address = server_socket.accept()
-   #data = input(' -> ')
-   #conn.send(data.encode())  # send data to the client
-      s=input('Willing to accept more connections?')
-   conn.close()  # close the connection
+
+   conn.close()                                                                                       # close the connection
 
 
 if __name__ == '__main__':
