@@ -1,3 +1,14 @@
+'''
+
+Made by:-
+-----------------
+SATYAM JINDAL
+04-07-2018
+-----------------
+
+
+'''
+
 import subprocess
 import MySQLdb
 
@@ -9,7 +20,6 @@ except Exception as e:
 cursor = db.cursor()
 my = subprocess.run(['nmap',' ','-sn',' ','192.168.0.1/24',' ','-n'],stdout = subprocess.PIPE)
 my=str(my)
-#myprocess = myprocess.replace('\\r\\n','\n')
 my = my[my.index('Time')+8:]
 my = my.replace('\\r\\n','\\')
 final_list=[]
