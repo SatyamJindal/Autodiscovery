@@ -9,7 +9,7 @@ SATYAM JINDAL
 
 '''
 
-# Code for Server Side
+# Code for Server Side  (FOR 32bit or 64bit)
 
 
 import MySQLdb
