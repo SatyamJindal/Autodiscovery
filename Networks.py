@@ -46,27 +46,26 @@ for i in range(till-2):
         s+=my[i]
 #curr=1
 
-cursor.execute('SELECT MAX(id) from devices;')                                                     # Gets the precious maximum Id so a duplicate key is not created
-                                                                                                      # Done to avoid the unique primary key law
+cursor.execute('SELECT MAX(id) from devices;')                                                                      # Gets the previous maximum Id so a duplicate key is not created
+                                                                                                                    # Done to avoid the unique primary key law
 num = cursor.fetchall()                                                          
 num=str(num[0])
 curr = num[1:num.index(',')]
 if(curr[0]=='N'):
-    curr=1                                                                                       #Increments the current Maximum Id by one
+    curr=1                                                                                                          # Increments the current Maximum Id by one
 else:
      curr = int(curr)+1
 
-cursor.execute('SELECT MAX(iter) from devices;')                                                     # Gets the precious maximum Id so a duplicate key is not created
-                                                                                                      # Done to avoid the unique primary key law
+cursor.execute('SELECT MAX(iter) from devices;')                                                                    # Gets the current maximum Iteration number
 ite = cursor.fetchall()                                                          
 ite=str(ite[0])
 ite = ite[1:ite.index(',')]
 if(ite[0]=='N'):
-    ite=1                                                                                       #Increments the current Maximum Id by one
+    ite=1                                                                                                           # Increments the current Maximum Iteration by one
 else:
      ite = int(ite)+1
      
-                                                                               # Deleting the previously existing List
+                                                                               
 for i in range(0,len(final_list)-3,3):
     cursor.execute('INSERT INTO devices VALUES(%s,%s,%s,%s,%s)',(curr,final_list[i],final_list[i+1],final_list[i+2],ite))  # Inseting into the Database
     curr+=1
