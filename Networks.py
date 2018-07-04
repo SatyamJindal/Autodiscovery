@@ -43,8 +43,8 @@ for i in range(till-2):
         c%=3
         s=''
     else:
-        s+=my[i]
-#curr=1
+        s+=my[i]                                                                                                    # **final_list** contains all names of devices connect to the network
+
 
 cursor.execute('SELECT MAX(id) from devices;')                                                                      # Gets the previous maximum Id so a duplicate key is not created
                                                                                                                     # Done to avoid the unique primary key law
