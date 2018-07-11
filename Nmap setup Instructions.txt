@@ -1,0 +1,21 @@
+Instructions to install NMAP on your PC
+
+-----------------------------------------
+
+1.) Go to "https://nmap.org/download.html"
+2.) Under Microsoft Windows binaries click on : - 
+Latest stable command-line zipfile: (Click here)
+3.) Extract the files and move the folder to "Program Files".
+4.) Rename the folder to "Nmap"
+5.) Right click on "My computer Icon/This PC" > "Properties" > "Advanced System Settings" > "Environment Variables"
+6.) Select "TMP" and cick on "New"
+7.) Variable Name: - "path"
+    variable value: - "path of the Nmap directory"
+                       eg: - C:\Program Files\Nmap
+    And click "ok"
+8.) Go to Command Prompt and type "nmap"
+(If it doesn't show an error it means you have installed it successfuly)
+9.) Now you also need to get "WinPcap".
+10.) Go to "https://www.winpcap.org/install/" and click on "Installer for Windows".
+11.) Complete the setup.
+
