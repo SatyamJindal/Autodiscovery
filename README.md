@@ -28,3 +28,10 @@ The **second segment** gets the server all the devices that are connected to the
 
 It can used to verify if all the employees are not using any outdated product or a product which they should not be using. This will allow the organisation to take immediate action if some wrong doing is found.
 
+## Set-Up Instructions :exclamation:
+
+
+**Technologies needed –**
++ Python
+
+
