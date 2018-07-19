@@ -21,3 +21,10 @@ The first segment consists of a script for the client side which when executed e
 
 +	SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 +	SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+The **second segment** gets the server all the devices that are connected to the network. It may a printer, a mobile phone, a laptop or any other device. It uses an ethical hacking tool called “Nmap” to get the respective information. 
+
+**How is it useful for any organisation?**
+
+It can used to verify if all the employees are not using any outdated product or a product which they should not be using. This will allow the organisation to take immediate action if some wrong doing is found.
+
