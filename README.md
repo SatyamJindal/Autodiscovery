@@ -34,4 +34,18 @@ It can used to verify if all the employees are not using any outdated product or
 **Technologies needed –**
 + Python
 
+**Python Modules needed –**
++ socket
++ platform
++ uuid
++ ctypes
++ itertools
++ winreg
++ subprocess
++ MySQLdb
++ Cx_Freeze
+
+**_Tip:_** - The easiest way to get the above modules is to use pip. :thumbsup:
+
+
 
