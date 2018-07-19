@@ -47,5 +47,10 @@ It can used to verify if all the employees are not using any outdated product or
 
 **_Tip:_** - The easiest way to get the above modules is to use pip. :thumbsup:
 
+**Setup on your PC**
+
+
+
+
 
 
