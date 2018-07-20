@@ -54,13 +54,13 @@ It can used to verify if all the employees are not using any outdated product or
 1. Go to "http://www.wampserver.com/en/" and download the version that will suit your system requirements (32 or 64bit).
 2. If you do not have Microsoft Visual Studio : - 
 Get it from -  "http://www.microsoft.com/en-us/download/details.aspx?id=30679" and finish the setup.
-3. During the installaiton of the wamp server you need to choose your default browser (Google Chrome preffered)
+3. During the installation of the wamp server you need to choose your default browser (Google Chrome preffered)
 Go to "C:\Program Files (x86)\Google\Chrome\Application" directory and choose "Chrome".
-4. Open "phpmyadmin" and this is where we create our Database.
+4. Open "phpmyadmin" and this is where we create our Database (Name of the database -> **python**).
 5. Two tables need to be created:
 
 --------
-Software
+Text
 --------
 
 **ATTRIBUTES**
@@ -86,6 +86,10 @@ Devices
 + Latency (varchar(255))
 + Mac Address (varchar(255))
 + Iter (int(11))
+
+The structure of both the tables should look like:-
+
+
 
 
 
