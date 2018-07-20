@@ -143,6 +143,11 @@ As it is not possible for every company to install python on every client's comp
 + Now that everything is set run the server code along with the client. For now I created a localhost using Wamp Server to test it on my own system.
 + The changes that need to be made for it to run on multiple systems are clearly commented in the code itself.
 
+The first segment when run on the same system will look something like: - 
+
+**_Note:-_** - Make sure that the WampServer is running as the information received will be directly stored in the database.
+
+
 
 
 
