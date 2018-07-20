@@ -113,6 +113,9 @@ Latest stable command-line zipfile: (Click here)
     And click "ok"
 8 Go to Command Prompt and type "nmap"
 (If it doesn't show an error it means you have installed it successfuly)
+
+![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/Nmap.gif "Namp")
+
 9. Now you also need to get "WinPcap".
 10. Go to "https://www.winpcap.org/install/" and click on "Installer for Windows".
 11. Complete the setup.
