@@ -120,6 +120,23 @@ Latest stable command-line zipfile: (Click here)
 10. Go to "https://www.winpcap.org/install/" and click on "Installer for Windows".
 11. Complete the setup.
 
+As it is not possible for every company to install python on every client's computer and ask them to run this code everytime, there is a way to create an executable file which does not require any installation of Python or its libraries.
+
+**Instructions for creating an Executable File using cx_Freeze**
+
+-------------------------------------------------------------
+
+1. Create a new folder.
+2. Create a copy of "client.py" and "setup.py" and move both of them to this folder.
+3. Hold "Shift" > "Right Click" on the folder created > "Open PowerShell Window here".
+4. Now write: - 
+
+        "python setup.py build"
+                    OR
+        "python3 setup.py build"
+	                OR
+        "py setup.py build"  and hit enter.
+5. A folder named **"build"** is created which contains the executable file which can be put into any system.
 
 **Up and Running**
 
