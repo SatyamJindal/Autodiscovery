@@ -36,7 +36,7 @@ for i in range(1024):
         continue
 
 aReg = ConnectRegistry(None,HKEY_LOCAL_MACHINE)
-aKey = OpenKey(aReg, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall")                                # Accessing registry containing list of 62 Bit Softwares
+aKey = OpenKey(aReg, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall")                                # Accessing registry containing list of 64 Bit Softwares
 
 
 for i in range(1024):
