@@ -121,6 +121,16 @@ Latest stable command-line zipfile: (Click here)
 11. Complete the setup.
 
 
+**Up and Running**
+
++ Now that everything is set run the server code along with the client. For now I created a localhost using Wamp Server to test it on my own system.
++ The changes that need to be made for it to run on multiple systems are clearly commented in the code itself.
+
+
+
+
+
+
 
 
 
