@@ -89,11 +89,11 @@ Devices
 
 The structure of both the tables should look like:-
 
-![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/table_devices.PNG "Devices")
+![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/table_devices.PNG "Devices")
 -------------
 -------------
 
-![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/table_text.PNG "Text")
+![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/table_text.PNG "Text")
 
 
 **Instructions to install NMAP on your PC**
