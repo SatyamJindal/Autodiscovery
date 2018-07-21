@@ -61,7 +61,7 @@ Go to "C:\Program Files (x86)\Google\Chrome\Application" directory and choose "C
 
 --------
 Text
---------
+
 
 **ATTRIBUTES**
 
@@ -78,7 +78,7 @@ Text
 
 --------
 Devices
---------
+
 
 **ATTRIBUTES**
 + id (int(11)) - Primary Key - Auto Increment
@@ -95,10 +95,10 @@ The structure of both the tables should look like:-
 
 ![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/table_text.PNG "Text")
 
+-----------------------------------------
 
 **Instructions to install NMAP on your PC** :fire:
 
------------------------------------------
 
 1. Go to "https://nmap.org/download.html"
 2. Under Microsoft Windows binaries click on : - 
@@ -122,9 +122,9 @@ Latest stable command-line zipfile: (Click here)
 
 As it is not possible for every company to install python on every client's computer and ask them to run this code everytime, there is a way to create an executable file which does not require any installation of Python or its libraries.
 
-**Instructions for creating an Executable File using cx_Freeze** :file_folder:
-
 -------------------------------------------------------------
+
+**Instructions for creating an Executable File using cx_Freeze** :file_folder:
 
 1. Create a new folder.
 2. Create a copy of "client.py" and "setup.py" and move both of them to this folder.
@@ -138,6 +138,7 @@ As it is not possible for every company to install python on every client's comp
         "py setup.py build"  and hit enter.
 5. A folder named **"build"** is created which contains the executable file which can be put into any system.
 
+------------------
 **Up and Running** :runner:
 
 + Now that everything is set run the server code along with the client. For now I created a localhost using Wamp Server to test it on my own system.
