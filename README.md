@@ -152,6 +152,9 @@ Below is how it will look like initially when the database has no entry and afte
 ![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/Server.gif "Implementation")
 
 
+The second segment which includes the information about the devices connected to the current network will look something like: - 
+
+
 
 
 
