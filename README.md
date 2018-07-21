@@ -24,7 +24,7 @@ The first segment consists of a script for the client side which when executed e
 
 The **second segment** gets the server all the devices that are connected to the network. It may a printer, a mobile phone, a laptop or any other device. It uses an ethical hacking tool called “Nmap” to get the respective information. 
 
-**How is it useful for any organisation?**
+**How is it useful for any organisation?** :question:
 
 It can used to verify if all the employees are not using any outdated product or a product which they should not be using. This will allow the organisation to take immediate action if some wrong doing is found.
 
@@ -47,7 +47,7 @@ It can used to verify if all the employees are not using any outdated product or
 
 **_Tip:_** - The easiest way to get the above modules is to use pip. :thumbsup:
 
-**Instructions For setup of the database** 
+**Instructions For setup of the database** :newspaper:
 
 -----------------------------------------
 
@@ -96,7 +96,7 @@ The structure of both the tables should look like:-
 ![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/table_text.PNG "Text")
 
 
-**Instructions to install NMAP on your PC**
+**Instructions to install NMAP on your PC** :fire:
 
 -----------------------------------------
 
@@ -122,7 +122,7 @@ Latest stable command-line zipfile: (Click here)
 
 As it is not possible for every company to install python on every client's computer and ask them to run this code everytime, there is a way to create an executable file which does not require any installation of Python or its libraries.
 
-**Instructions for creating an Executable File using cx_Freeze**
+**Instructions for creating an Executable File using cx_Freeze** :file_folder:
 
 -------------------------------------------------------------
 
@@ -138,7 +138,7 @@ As it is not possible for every company to install python on every client's comp
         "py setup.py build"  and hit enter.
 5. A folder named **"build"** is created which contains the executable file which can be put into any system.
 
-**Up and Running**
+**Up and Running** :runner:
 
 + Now that everything is set run the server code along with the client. For now I created a localhost using Wamp Server to test it on my own system.
 + The changes that need to be made for it to run on multiple systems are clearly commented in the code itself.
