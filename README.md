@@ -157,9 +157,9 @@ The second segment which includes the information about the devices connected to
 ![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/Network.gif "Network Devices")
 
 
-
+------------
 ## Future Plans
-+ Do the same for other operating systems
++ Do the same for other operating systems.
 + Make changes in the registry in such a way that the client side code is run automatically as and when it is connected to the network.
 
 
