@@ -147,6 +147,11 @@ The first segment when run on the same system will look something like: -
 
 **_Note:-_** - Make sure that the WampServer is running as the information received will be directly stored in the database.
 
+Below is how it will look like initially when the database has no entry and after the client runs the script there is an update made to the databse with all his details. The client code is run on the local server created on my PC for now just to show a basic working of this segment.
+
+![alt text](https://github.com/SatyamJindal/Autodiscovery/blob/master/Images/Server.gif "Implementation")
+
+
 
 
 
